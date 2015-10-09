@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  微博
+//
+//  Created by Alex on 15/10/9.
+//  Copyright © 2015年 Alex. All rights reserved.
+//
+#import <Availability.h>
+
+#ifndef __OBJC__
+#import <UIKit.UIKit.h>
+#import <Foundation/Foundation.h>
+
+//随机色 arc4random_uniform(11) 表示0-10的随机数 除以10则表示0-1
+#define EXRandomColor [UIColor colorWithRed:(arc4random_uniform(11)/10.0) green:arc4random_uniform(11)/10.0 blue:(arc4random_uniform(11)/10.0) alpha:1.0];
+#endif
