@@ -1,34 +1,34 @@
 //
-//  EXMessageCenterViewController.m
+//  EXProfileViewController.m
 //  微博
 //
 //  Created by Alex on 15/10/10.
 //  Copyright © 2015年 Alex. All rights reserved.
 //
 
-#import "EXMessageCenterViewController.h"
+#import "EXProfileViewController.h"
+#import "testViewController.h"
 
-@interface EXMessageCenterViewController ()
+@interface EXProfileViewController ()
 
 @end
 
-@implementation EXMessageCenterViewController
+@implementation EXProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"跳转" style:UIBarButtonItemStylePlain target:self action:@selector(jump)];
+  
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+- (void)jump
+{
+    testViewController *vc = [[testViewController alloc]init];
+    vc.title = @"vc";
+    [self.navigationController pushViewController:vc animated:YES];
 
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
