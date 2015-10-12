@@ -7,6 +7,8 @@
 //
 
 #import "EXDiscoverViewController.h"
+#import "UIView+Extension.h"
+#import "EXSearchBar.h"
 
 @interface EXDiscoverViewController ()
 
@@ -17,17 +19,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+//    UISearchBar *sb = [[UISearchBar alloc]init];
+//    sb.scopeBarBackgroundImage = [UIImage imageNamed:@"searchbar_textfield_background"];
+//    self.navigationItem.titleView = sb;
+//    （系统自带太多限制）
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //创建搜索框
+    EXSearchBar *searchBar = [EXSearchBar searchBar];
+    searchBar.width = 300;
+    searchBar.hight = 30;
+    self.navigationItem.titleView = searchBar;
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 #pragma mark - Table view data source
 

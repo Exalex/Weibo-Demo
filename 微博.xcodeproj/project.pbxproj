@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA57B51D1BCC069A00BEE95C /* EXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA57B51C1BCC069A00BEE95C /* EXTabBar.m */; settings = {ASSET_TAGS = (); }; };
 		FA5DE51A1BC7D0FA00A93D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5DE5191BC7D0FA00A93D56 /* Assets.xcassets */; };
 		FA5DE5281BC7D0FA00A93D56 /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5271BC7D0FA00A93D56 /* __Tests.m */; };
 		FA5DE5331BC7D0FA00A93D56 /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5321BC7D0FA00A93D56 /* __UITests.m */; };
@@ -25,6 +26,9 @@
 		FA5DE5A41BC9487100A93D56 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5961BC9487100A93D56 /* testViewController.m */; settings = {ASSET_TAGS = (); }; };
 		FA5DE5A51BC9487100A93D56 /* testViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DE5971BC9487100A93D56 /* testViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		FA5DE5AB1BC95D2800A93D56 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5AA1BC95D2800A93D56 /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		FA5DE5AE1BCA189400A93D56 /* EXSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5AD1BCA189400A93D56 /* EXSearchBar.m */; settings = {ASSET_TAGS = (); }; };
+		FA5DE5B11BCA705300A93D56 /* EXDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5B01BCA705300A93D56 /* EXDropDownMenu.m */; settings = {ASSET_TAGS = (); }; };
+		FA5DE5B71BCA79CC00A93D56 /* EXTitleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5DE5B61BCA79CC00A93D56 /* EXTitleTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA57B51B1BCC069A00BEE95C /* EXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTabBar.h; sourceTree = "<group>"; };
+		FA57B51C1BCC069A00BEE95C /* EXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTabBar.m; sourceTree = "<group>"; };
 		FA5DE50A1BC7D0FA00A93D56 /* 微博.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微博.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5DE5191BC7D0FA00A93D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5DE51E1BC7D0FA00A93D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +88,12 @@
 		FA5DE5971BC9487100A93D56 /* testViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = testViewController.xib; sourceTree = "<group>"; };
 		FA5DE5A91BC95D2800A93D56 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		FA5DE5AA1BC95D2800A93D56 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		FA5DE5AC1BCA189400A93D56 /* EXSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXSearchBar.h; sourceTree = "<group>"; };
+		FA5DE5AD1BCA189400A93D56 /* EXSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXSearchBar.m; sourceTree = "<group>"; };
+		FA5DE5AF1BCA705300A93D56 /* EXDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXDropDownMenu.h; sourceTree = "<group>"; };
+		FA5DE5B01BCA705300A93D56 /* EXDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXDropDownMenu.m; sourceTree = "<group>"; };
+		FA5DE5B51BCA79CC00A93D56 /* EXTitleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EXTitleTableViewController.h; path = ../Controller/EXTitleTableViewController.h; sourceTree = "<group>"; };
+		FA5DE5B61BCA79CC00A93D56 /* EXTitleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EXTitleTableViewController.m; path = ../Controller/EXTitleTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +270,8 @@
 		FA5DE57B1BC9487100A93D56 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA5DE5B51BCA79CC00A93D56 /* EXTitleTableViewController.h */,
+				FA5DE5B61BCA79CC00A93D56 /* EXTitleTableViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +307,12 @@
 		FA5DE5841BC9487100A93D56 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA5DE5AC1BCA189400A93D56 /* EXSearchBar.h */,
+				FA5DE5AD1BCA189400A93D56 /* EXSearchBar.m */,
+				FA5DE5AF1BCA705300A93D56 /* EXDropDownMenu.h */,
+				FA5DE5B01BCA705300A93D56 /* EXDropDownMenu.m */,
+				FA57B51B1BCC069A00BEE95C /* EXTabBar.h */,
+				FA57B51C1BCC069A00BEE95C /* EXTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,10 +527,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5DE5AE1BCA189400A93D56 /* EXSearchBar.m in Sources */,
 				FA5DE59E1BC9487100A93D56 /* EXNavigationController.m in Sources */,
 				FA5DE5A11BC9487100A93D56 /* EXProfileViewController.m in Sources */,
 				FA5DE59C1BC9487100A93D56 /* EXHomeViewController.m in Sources */,
 				FA5DE59B1BC9487100A93D56 /* EXDiscoverViewController.m in Sources */,
+				FA57B51D1BCC069A00BEE95C /* EXTabBar.m in Sources */,
 				FA5DE59F1BC9487100A93D56 /* EXTabBarViewController.m in Sources */,
 				FA5DE59A1BC9487100A93D56 /* UIView+Extension.m in Sources */,
 				FA5DE5451BC7D4E300A93D56 /* main.m in Sources */,
@@ -519,7 +541,9 @@
 				FA5DE5A01BC9487100A93D56 /* EXMessageCenterViewController.m in Sources */,
 				FA5DE5A21BC9487100A93D56 /* EXtextViewController.m in Sources */,
 				FA5DE5A41BC9487100A93D56 /* testViewController.m in Sources */,
+				FA5DE5B71BCA79CC00A93D56 /* EXTitleTableViewController.m in Sources */,
 				FA5DE5981BC9487100A93D56 /* AppDelegate.m in Sources */,
+				FA5DE5B11BCA705300A93D56 /* EXDropDownMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

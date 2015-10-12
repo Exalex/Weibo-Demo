@@ -18,14 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //添加一个item
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"写私信" style:UIBarButtonItemStylePlain target:self action:@selector(composeMsg)];
+    //设置item为disable
+    self.navigationItem.rightBarButtonItem.enabled = NO;
     
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
 
 }
 

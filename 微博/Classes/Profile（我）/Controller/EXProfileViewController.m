@@ -8,25 +8,41 @@
 
 #import "EXProfileViewController.h"
 #import "testViewController.h"
+#import "EXDropDownMenu.h"
+#import "UIView+Extension.h"
 
 @interface EXProfileViewController ()
-
+@property (nonatomic, strong) UIImageView *testView;
 @end
 
 @implementation EXProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"跳转" style:UIBarButtonItemStylePlain target:self action:@selector(jump)];
-  
+   
+    _testView = [[UIImageView alloc]init];
+    _testView.frame = CGRectMake(100, 100, 100, 100);
+    _testView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_testView];
+    
 }
 
 - (void)jump
 {
-    testViewController *vc = [[testViewController alloc]init];
-    vc.title = @"vc";
-    [self.navigationController pushViewController:vc animated:YES];
+//    testViewController *vc = [[testViewController alloc]init];
+//    vc.title = @"vc";
+//    [self.navigationController pushViewController:vc animated:YES];
+    
+    EXDropDownMenu *drop = [EXDropDownMenu menu];
+    UIView *view = [[UIView alloc]init];
+    view.backgroundColor = [UIColor redColor];
+    view.width = 50;
+    view.hight = 100;
+    drop.content = view;
+    [drop showFrom:_testView];
+    
 
 }
 #pragma mark - Table view data source

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "EXTabBarViewController.h"
+#import "UIView+Extension.h"
 
 
 @interface AppDelegate ()
@@ -16,6 +17,7 @@
 
 @implementation AppDelegate
 
+UIWindow *window2;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //  1.创建窗口

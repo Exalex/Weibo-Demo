@@ -13,8 +13,10 @@
 #import "EXDiscoverViewController.h"
 #import "EXProfileViewController.h"
 #import "EXNavigationController.h"
+#import "UIView+Extension.h"
+#import "EXTabBar.h"
 
-@interface EXTabBarViewController ()
+@interface EXTabBarViewController ()<EXTabBarDelegete>
 
 @end
 
@@ -22,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //设置tabbar的子控制器
+    //初始化子控制器
     EXHomeViewController *home = [[EXHomeViewController alloc]init];
     [self addchildVc:home WithTitle:@"首页" image:@"tabbar_home" selectImage:@"tabbar_home_select"];
     EXMessageCenterViewController *messageCenter = [[EXMessageCenterViewController alloc]init];
@@ -32,16 +34,22 @@
     EXProfileViewController *profile = [[EXProfileViewController alloc]init];
     [self addchildVc:profile WithTitle:@"我" image:@"tabbar_profile" selectImage:@"tabbar_home_select"];
     
+//替换成自定义重写过的tabbar
+//self.tabBar = [[EXTabBar alloc]init];
+    EXTabBar *tabBar = [[EXTabBar alloc]init];
+    tabBar.delegate = self;
+    
+    [self setValue:[[EXTabBar alloc]init] forKeyPath:@"tabBar"];
+    
     
     //把创建的view加入tabBarController
     //    tabbarVc.viewControllers = @[home,messageCenter,discover,profile];
    
-    
-    
-    /**如果有很多重复代码－》将重复代码抽取到一个方法中
+  /**如果有很多重复代码－》将重复代码抽取到一个方法中
      1.相同代码抽取的一个方法中
      2.不同的东西变成参数
-     3.在使用到这段代码的这个地方调用方法，传递参数*/
+     3.在使用到这段代码的这个地方调用方法，传递参数  */
+
 }
 
 //添加一个子控制器
@@ -64,13 +72,21 @@
     [childVc.tabBarItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectedtextAttributes forState:UIControlStateSelected];
     
-    childVc.view.backgroundColor = EXRandomColor;
+//    childVc.view.backgroundColor = EXRandomColor;
 //先给外面传进来的小控制器 包装一个导航控制器
   EXNavigationController *nav = [[EXNavigationController alloc]initWithRootViewController:childVc];
     
 //添加子控制器：把创建的view加入tabBarController
     //tabbarVc.viewControllers = @[home,messageCenter,discover,profile];
      [self addChildViewController:nav];
+}
+#pragma mark - EXTabBarDelegete代理方法
+- (void)tabBarDidClickPlusButton:(EXTabBar *)tabBar
+{
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self presentViewController:vc animated:YES completion:nil];
+
 }
 
 
