@@ -80,6 +80,10 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self dismiss];
+    //通知外界，自己被销毁（改变titleBtn图片）
+    if ([self.delegate respondsToSelector:@selector(dropDownMenuDiddismiss:)]) {
+        [self.delegate dropDownMenuDiddismiss:self];
+    }
 }
 
 //通过属性传给set方法UIView，再加到灰色图片上

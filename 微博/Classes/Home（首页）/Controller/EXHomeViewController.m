@@ -15,7 +15,7 @@
 #import "const.h"
 #import "EXTitleTableViewController.h"
 #import "EXDropDownMenu.h"
-@interface EXHomeViewController ()
+@interface EXHomeViewController ()<EXDropDownMenuDelegate>
 
 @end
 
@@ -61,7 +61,7 @@
 {
 //   1.创建下拉菜单
    EXDropDownMenu *menu = [EXDropDownMenu menu];
-    
+    menu.delegate = self;
 //   2.通过content属性传给dropDownMenu任何UIView或ViewController
     EXTitleTableViewController *vc = [[EXTitleTableViewController alloc]init];
     vc.view.hight = 200;
@@ -71,8 +71,18 @@
 //   3.显示下拉菜单
     [menu showFrom:titleButton];
 
+//   4.让箭头向上
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateNormal];
     
 }
+#pragma mark - EXDropDownMenuDelegate
+- (void)dropDownMenuDiddismiss:(EXDropDownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+
+}
+
 
 #pragma mark - Table view data source
 

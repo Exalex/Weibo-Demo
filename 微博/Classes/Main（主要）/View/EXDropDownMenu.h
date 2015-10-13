@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class EXDropDownMenu;
+
+@protocol EXDropDownMenuDelegate <NSObject>
+@optional
+- (void)dropDownMenuDiddismiss:(EXDropDownMenu *)menu;
+@end
 
 @interface EXDropDownMenu : UIView
-
+@property (nonatomic, weak) id<EXDropDownMenuDelegate> delegate;
 + (instancetype)menu;
 //显示
 - (void)showFrom:(UIView *)from;

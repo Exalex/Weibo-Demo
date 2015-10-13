@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "EXTabBarViewController.h"
 #import "UIView+Extension.h"
+#import "EXNewFeatureViewController.h"
 
 
 @interface AppDelegate ()
@@ -24,7 +25,27 @@ UIWindow *window2;
     self.window = [[UIWindow alloc]init];
     self.window.frame = [UIScreen mainScreen].bounds;
 //  2.设置根控制器
-    self.window.rootViewController = [[EXTabBarViewController alloc]init];
+    
+//    取出上次在沙盒中的版本号（上一次使用版本）
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults]objectForKey:@"CFBundleVersion"];
+    
+//    当前软件的版本号（从plist中获得
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"]
+    ;
+    
+    if ([currentVersion isEqualToString:lastVersion]) {//版本号相同
+        self.window.rootViewController = [[EXTabBarViewController alloc]init];
+    
+    }else{//版本号不同
+        
+        self.window.rootViewController = [[EXNewFeatureViewController alloc]init];
+//    将当前版本号存进沙盒
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"CFBundleVersion"];
+        [[NSUserDefaults standardUserDefaults]synchronize];//立即同步
+    }
+    
+
+    
 //  3.显示窗口
     [self.window makeKeyAndVisible];
 
